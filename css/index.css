@@ -1,0 +1,158 @@
+.b2{
+    display: block;
+    margin: auto;
+
+}
+
+.b2__titulo-container{
+    font-family: 'Public Sans', sans-serif;
+    font-weight: normal;
+    padding: 45px;
+    text-align: center;
+}
+
+.b2__titulo{
+    font-size: 30px;
+    color: #0a96ff;    
+}
+
+.b2-box-content{
+    
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    
+}
+
+.b2-box{
+    font-size: 20px;
+    background-color: #0032a0;
+    display: flex;
+    padding:  0 2em;
+    width: 100%;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    color: #fff;
+    height: 345px;
+    position: relative;
+    box-sizing: border-box;
+    border-right: 1px solid #bfbfbf;
+    border-top: 1px solid #bfbfbf;
+    transition: all 0.25s;
+    font-family: 'Public Sans', sans-serif;
+}
+
+.b2-box:hover{
+    background-color: #fff;
+    color: #0032a0;
+}
+
+
+.b2-box p.active::after{
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+
+}
+.b2-box-titulo{
+    box-sizing: border-box;
+    /*padding-left: 32px;*/
+    transform: all 0.25s;
+    font-weight:  bolder;
+
+}
+
+.b2-box-e{
+    
+    padding-top: 37px;
+    /*padding-left: 32px;*/
+    padding-right: 35px;
+    font-weight: normal;
+    font-size: 14px;
+    letter-spacing: 2px;
+    transition: all 0.25s;
+    display: flex;
+    
+
+}
+
+.b2-box a{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+p{
+    margin: 0 0 15px;
+}
+
+
+.b2-box-link{
+    padding: 0;
+    padding-bottom: 38px;
+    align-self: flex-end;
+    font-size: 12px;
+    
+  
+}
+
+@media (max-width: 854px) {
+
+
+    .b2-box-content{
+        
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      
+    }
+
+  }
+
+
+.b2-more-content{
+
+    text-align: center;
+    background-color: #0a96ff;
+    height: 70px;
+    line-height: 70px;
+    font-family: 'Public Sans', sans-serif;
+    
+
+}
+.b2-more{
+
+    color: white;
+    letter-spacing: 1px;
+    font-size: 16px;
+
+}
+.btn_element{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-weight:  bolder;
+}
+/*
+@media (min-width: 854px) {
+
+    .b2-box{
+        position: static;
+        flex-direction: row;
+        background-image: none;
+        gap: 1rem;
+        opacity: 1;
+        width: auto;
+        pointer-events: auto;    
+    }
+}*/
