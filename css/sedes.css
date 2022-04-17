@@ -56,7 +56,7 @@
 }
 
 
-@media screen and (min-width: 973px) {
+@media screen and (min-width:854px) {
     .main-container__list-link{
         grid-template-columns: repeat(2, 29rem);
         justify-content: center;
