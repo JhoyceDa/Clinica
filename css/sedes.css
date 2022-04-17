@@ -13,6 +13,7 @@
 }
 .list-link__link{
   display: grid;
+  border-radius: 2rem;  
  
 }
 .main-container__list-link{
@@ -59,15 +60,14 @@
     .main-container__list-link{
         grid-template-columns: repeat(2, 29rem);
         justify-content: center;
-        column-gap: 1rem;
+        column-gap: 2rem;
     }
     
 }
 @media screen and (min-width: 1370px) {
     .main-container__list-link{
         grid-template-columns: repeat(3, 29rem);
-        justify-content: center;
-        column-gap: 1rem;
+        justify-content: space-between;
     }
     
 }
