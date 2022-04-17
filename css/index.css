@@ -1,3 +1,9 @@
+:root{
+    --all-transitions: all 0.25s;
+    --primary-border-color: #bfbfbf;
+    --text-color: #fff;
+    --primary-theme-color: #0032a0;
+}
 
 @keyframes title-right {
     0% {
@@ -31,7 +37,7 @@
     line-height: 1px;
 }
 
-.b2-box-content{
+.especialidades__box-container{
     
     display: flex;
     flex-direction: row;
@@ -42,54 +48,39 @@
     
 }
 
-.b2-box{
+.especialidades__box{
     font-size: 20px;
-    background-color: #0032a0;
+    background-color: var(--primary-theme-color);
     display: flex;
     padding:  0 2em;
     width: 100%;
     flex-direction: column;
     -webkit-box-pack: justify;
     justify-content: space-between;
-    color: #fff;
+    color: var(--text-color);
     height: 345px;
     position: relative;
     box-sizing: border-box;
-    border-right: 1px solid #bfbfbf;
-    border-top: 1px solid #bfbfbf;
-    transition: all 0.25s;
+    border-right: 1px solid var(--primary-border-color);
+    border-top: 1px solid var(--primary-border-color);
+    transition: var(--all-transitions);
     font-family: 'Public Sans', sans-serif;
 }
 
-.b2-box:hover{
+.especialidades__box:hover{
     background-color: #fff;
-    color: #0032a0;
+    color: var(--primary-theme-color);
     
 }
 
-/*
-.b2-box:hover > .b2-box-link> .btn_element-icon{
 
-    
-    
-}*/
-
-
-.b2-box p.active::after{
+.especialidades__box p.active::after{
     -webkit-box-flex: 1;
     flex-grow: 1;
 
 }
 
-.b2-box-titulo{
-    box-sizing: border-box;
-    /*padding-left: 32px;*/
-    transform: all 0.25s;
-    font-weight:  bolder;
-
-}
-
-.b2-box-e{
+.especialidades__box-encabezado{
     
     padding-top: 37px;
     /*padding-left: 32px;*/
@@ -97,13 +88,13 @@
     font-weight: normal;
     font-size: 14px;
     letter-spacing: 2px;
-    transition: all 0.25s;
+    transition: var(--all-transitions);
     display: flex;
     
 
 }
 
-.b2-box a{
+.especialidades__box a{
     position: absolute;
     top: 0;
     left: 0;
@@ -119,8 +110,17 @@ p{
     margin: 0 0 15px;
 }
 
+.especialidades__nombre{
+    box-sizing: border-box;
+    /*padding-left: 32px;*/
+    transform: all 0.25s;
+    font-weight:  bolder;
 
-.b2-box-link{
+}
+
+
+
+.especialidades__link{
     padding: 0;
     padding-bottom: 38px;
     align-self: flex-end;
@@ -132,7 +132,7 @@ p{
 @media (max-width: 854px) {
 
 
-    .b2-box-content{
+    .especialidades__box-container{
         
       display: grid;
       grid-template-columns: repeat(2, 1fr);
