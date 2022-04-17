@@ -21,6 +21,7 @@
     top: 0;
     left: 0;
     width: 100%;
+    background-color: #fff;
     
 }
 .header-container{
@@ -84,12 +85,14 @@
     display: flex;
     justify-content: end;
     align-items: center;
+    
 }
 .header-bot-nav{
     display: flex;
     padding: 1em 0;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
+    
 }
 .header-bot-nav-container{
     margin: 0;
@@ -181,4 +184,8 @@
         transform: scale(0.5);
         animation: none;
     }
+}
+
+.image{
+    margin-top: 8rem;
 }
