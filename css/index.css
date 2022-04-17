@@ -1,0 +1,108 @@
+:root{
+    --primary-theme-color: #7bd860;
+    --secondary-theme-color: #ffffff;
+    --max-width-container: 1024px;
+    --padding-container: 0 2em;
+    --all-transitions: all 0.25s;
+}
+.body{
+    margin: 0;
+    min-height: 200vh;
+}
+.header{
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    
+}
+.header-container{
+    display: grid;
+    max-width: var(--max-width-container);
+    margin: auto;
+    padding: var(--padding-container);
+}
+.header-container-top{
+    display: flex;
+    justify-content: end;
+    padding: 0;
+    align-items: center;
+}
+.header-container-top-nav{
+    background: -webkit-linear-gradient(left, rgba(17, 193, 216, 0.67) 50%, rgba(99, 251, 215, 0.988));
+    padding:0 1rem;
+}
+.header-top__menu-link-list{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+}
+.header-top__menu-link{
+    color: white;
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 700;
+    font-family: 'Roboto', 'sanf serif';
+    display: flex;
+    transition: var(--all-transitions);
+}
+.header-top__menu-link:hover{
+    color: blue;
+    cursor: pointer;
+}
+.header-top__menu-link-item{
+    display: flex;
+}
+.header-top__menu-link-item:hover{
+    transform: scale(1.05);
+}
+#icono_ws{
+    width: 180px;
+    margin-top: -17px;
+    margin-bottom: -15px;
+}
+
+.header-container-bot{
+    display: flex;
+    justify-content: end;
+}
+.header-bot-nav{
+    display: flex;
+    padding: 1rem;
+}
+.header-bot-nav-container{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+.header-bot-nav-container__menu-link{
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.header-bot-nav-container__menu-item{
+    display: flex;
+}
+.header-bot-nav-container_date{
+
+}
+.header-bot-nav__menu-icon-label{
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: relative;
+    bottom: 2.5px;
+    transition: var(--all-transitions);
+}
+.header-bot-nav__menu-icon-checkbox{
+    display: none;
+
+}
