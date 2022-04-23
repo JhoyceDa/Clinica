@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.list-link__link{
+  display: grid;
+  margin-bottom: 1rem;
+  position: relative;
+   overflow: hidden;
+
+}
+.list-link__link img{
+    width: 29rem;
+    
+}
+.list-link__link{
+  display: grid;
+  border-radius: 2rem;  
+ 
+}
+.main-container__list-link{
+    display: grid;
+    justify-content: center;
+    
+}
+.main-container{
+    overflow: hidden;
+}
+.main-container h2{
+    font-family:'Bebas Neue', cursive;
+    text-align: center;
+    font-size: 50px;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color: transparent;
+    background-image: url(https://i.pinimg.com/564x/80/a9/87/80a98791274b2db5995b284b5416cd5a.jpg);
+    
+}
+.list-link__link::before{
+    content: "Mas Informacion";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #5b40f3a6;
+    transform: translate(100%);
+    transition: transform .4s;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.2rem;
+
+}
+.list-link__link:hover::before{
+    transform: translate(0);  
+}
+
+
+@media screen and (min-width:854px) {
+    .main-container__list-link{
+        grid-template-columns: repeat(2, 29rem);
+        justify-content: center;
+        column-gap: 2rem;
+    }
+    
+}
+@media screen and (min-width: 1370px) {
+    .main-container__list-link{
+        grid-template-columns: repeat(3, 29rem);
+        justify-content: space-between;
+    }
+    
+}
+
