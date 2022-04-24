@@ -1,0 +1,199 @@
+:root{
+    --max-width-container: 1200px;
+    --padding-section: 4rem 0;
+    --padding-container: 0 2em;
+    --all-transitions: all 0.25s;
+}
+.header-staff{
+    background-color: #0032a0;
+}
+.header-container-top-nav-staff{
+    background: -webkit-linear-gradient(left, #9b7aff 50%, #e194e7);
+    padding:0 1rem;
+    border-radius: 16px;
+}
+.header-bot_menu-link-staff{
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    display: flex;
+    transition: var(--all-transitions);
+}
+.header-bot_menu-link-staff--active{
+    font-size: 30px;
+    top: -10px;
+}
+.header-bot_menu-link-staff:hover{
+    transform: scale(1.10);
+    color: #fff;
+}
+.header-bot-nav-container_date-staff{
+    position: relative;
+    font-size: 0.9rem;
+    text-decoration: none;
+    background-color: #329fe7;
+    color: white;
+    padding: 1rem;
+    border-radius: 30px;
+    transition: var(--all-transitions);
+}
+.header-bot-nav-container_date-staff:hover{
+    background-color: #fff;
+    color: #329fe7;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+}
+.header-bot-nav__menu-icon-label-staff{
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: relative;
+    padding: 0 0.75rem 0 0;
+    bottom: 2.5px;
+    transition: var(--all-transitions);
+    color: #fff;
+}
+.header-bot-nav__menu-icon-label-staff:hover{
+    text-shadow: 0 0 0.25rem #fff000;
+    transform: rotate(360deg);
+    filter: brightness(150%);
+}
+.directory{
+    padding: var(--padding-section);
+    background-color: #0032a0;
+}
+.directory-container{
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    max-width: var(--max-width-container);
+    margin: auto;
+}
+.directory-container::before{
+    content: '';
+    display: inline-block;
+    width: 297px;
+    height: 189px;
+    position: absolute;
+    bottom: -50px;
+    background: url(https://www.clinicainternacional.com.pe/static/img/b7fond1.png);
+}
+.directory__title{
+    z-index: 100;
+    font-family: 'Gotham-Black',sans-serif;
+    font-size: 45px;
+    color: white;
+    font-weight: 800;
+}
+
+.filters{
+    padding: 2rem 0;
+}
+.filter-container{
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    max-width: var(--max-width-container);
+    margin: auto;
+}
+.filters__title{
+    padding: 0 1rem;
+    font-size: 26px;
+    margin: 0;
+    font-family: 'latoblack',sans-serif;
+    color: #0032a0;
+    font-weight: 700;
+}
+
+.results{
+    padding: 2rem 0;
+}
+.results-container{
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: var(--max-width-container);
+    margin: auto;
+}
+.results__title{
+    padding: 0 1rem;
+    font-size: 26px;
+    margin: 0;
+    font-family: 'latoblack',sans-serif;
+    color: #0032a0;
+    font-weight: 700;
+}
+.results__filter-list{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0 1rem;
+    cursor: pointer;
+    color: #bababa;
+}
+.results__filter-list:first-child{
+    color: #0032a0;
+}
+.results__filter-item{
+    font-size: 18px;
+    font-weight: 500;
+}
+.results__filter-list-limit{
+    margin: 0;
+}
+
+
+.doctors{
+    padding: var(--padding-section);
+}
+.doctors-container{
+    max-width: var(--max-width-container);
+    margin: auto;
+    padding:var(--padding-container);
+}
+
+.card-title{
+    color: #0032a0;
+}
+.card-text{
+    color: #9b61de;
+}
+
+.pagination{
+    padding: 0;
+    margin: 0;
+}
+.pagination-container{
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    max-width: var(--max-width-container);
+    margin: auto;
+}
+.pagination-mostrar{
+    margin: 0;
+    position: relative;
+    top: 5px;
+}
+
+@media(max-width: 854px){
+    .header-container-top-nav-staff{
+        position: relative;
+        right: -100px;
+        color: #0032a0;
+    }
+    .directory-container{
+        justify-content: center;
+    }
+    .directory__title{
+        font-size: 2rem;
+    }
+}
