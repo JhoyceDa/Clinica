@@ -1,5 +1,7 @@
+@import url(./staff.css);
 :root{
-    --max-width-container: 1024px;
+    --max-width-container: 1200px;
+    --padding-section: 4rem 0;
     --padding-container: 0 2em;
     --all-transitions: all 0.25s;
 }
@@ -113,9 +115,6 @@
     padding: 0;
     transition: var(--all-transitions);
 }
-.header-bot-nav-container__menu-link-list::before{
-    content: "🏠"
-}
 .header-bot_menu-link{
     position: relative;
     color: #b0b5b6;
@@ -123,6 +122,10 @@
     font-size: 1rem;
     display: flex;
     transition: var(--all-transitions);
+}
+.header-bot_menu-link--active{
+    font-size: 30px;
+    top: -10px;
 }
 .header-bot_menu-link:hover{
     color: #858585;
