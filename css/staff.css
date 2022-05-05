@@ -6,12 +6,32 @@
 }
 .header-staff{
     background-color: #0032a0;
+    position: fixed;
+    z-index: 200;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 .header-container-top-nav-staff{
     background: -webkit-linear-gradient(left, #9b7aff 50%, #e194e7);
     padding:0 1rem;
     border-radius: 16px;
 }
+
+.header-bot-nav__menu-icon-label-staff{
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: relative;
+    padding: 0 0.75rem 0 0;
+    transition: var(--all-transitions);
+    color: #fff;
+}
+.header-bot-nav__menu-icon-label-staff:hover{
+    text-shadow: 0 0 0.25rem #fff000, 0 0 0.5rem #fff000;
+    transform: rotate(360deg);
+    filter: brightness(150%);
+}
+
 .header-bot_menu-link-staff{
     position: relative;
     color: #fff;
@@ -22,16 +42,14 @@
 }
 .header-bot_menu-link-staff--active{
     font-size: 30px;
-    top: -10px;
 }
 .header-bot_menu-link-staff:hover{
-    transform: scale(1.10);
+    text-shadow: 0 0 0.25rem #fff000, 0 0 0.5rem #fff000;
     color: #fff;
 }
 .header-bot-nav-container_date-staff{
     position: relative;
     font-size: 0.9rem;
-    top: -10px;
     text-decoration: none;
     background-color: #329fe7;
     color: white;
@@ -44,22 +62,13 @@
     color: #329fe7;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
 }
-.header-bot-nav__menu-icon-label-staff{
-    font-size: 1.5rem;
-    cursor: pointer;
-    position: relative;
-    padding: 0 0.75rem 0 0;
-    bottom: 10px;
-    transition: var(--all-transitions);
-    color: #fff;
-}
-.header-bot-nav__menu-icon-label-staff:hover{
-    text-shadow: 0 0 0.25rem #fff000;
-    transform: rotate(360deg);
-    filter: brightness(150%);
-}
+
+
+
 .directory{
     padding: var(--padding-section);
+    position: relative;
+    top: 7rem;
     background-color: #0032a0;
 }
 .directory-container{
@@ -89,6 +98,8 @@
 
 .filters{
     padding: 2rem 0;
+    position: relative;
+    top: 6rem;
 }
 .filter-container{
     position: relative;
@@ -109,6 +120,8 @@
 
 .results{
     padding: 2rem 0;
+    position: relative;
+    top: 2rem;
 }
 .results-container{
     position: relative;
@@ -151,14 +164,16 @@
 
 
 .doctors{
-    padding: var(--padding-section);
+    padding: 4rem 0 0;
 }
 .doctors-container{
     max-width: var(--max-width-container);
     margin: auto;
     padding:var(--padding-container);
 }
-
+.card{
+    height: 100%;
+}
 .card-title{
     color: #0032a0;
 }
@@ -184,18 +199,41 @@
     position: relative;
     top: 5px;
 }
+@media(min-width:854px){
+    .header-bot-nav__menu-icon-label-staff{
+        display: none;
+    }
+}
 
 @media(max-width: 854px){
+    .header-staff{
+        position: fixed;
+        z-index: 200;
+    }
     .header-container-top-nav-staff{
+        display: none;
+    }
+    .header-bot-nav-container__menu-link-list{
+        background-color: #fff000;
+    }
+    .header-bot-nav__menu-icon-label-staff{
+        top: 4px;
+        right: 5px;
+    }
+    .directory{
         position: relative;
-        right: -100px;
-        color: #0032a0;
+        top: 4rem;
     }
     .directory-container{
         justify-content: center;
     }
     .directory__title{
         font-size: 2rem;
+    }
+    .d-flex{
+        display: flex;
+        flex-direction: column;
+        padding: 0 1rem;
     }
     .pagination-mostrar{
         top: 8px;

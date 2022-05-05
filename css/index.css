@@ -1,4 +1,5 @@
 @import url(./staff.css);
+
 :root{
     --max-width-container: 1200px;
     --padding-section: 4rem 0;
@@ -19,11 +20,11 @@
 }
 .header{
     position: fixed;
-    z-index: 100;
+    z-index: 200;
     top: 0;
     left: 0;
     width: 100%;
-    
+    background-color: white;
 }
 .header-container{
     max-width: var(--max-width-container);
@@ -75,17 +76,17 @@
 .header-top__menu-link-item{
     display: flex;
 }
-#icono_ws{
+.icono_ws{
     width: 180px;
     margin-top: -17px;
     margin-bottom: -15px;
 }
 
-
 .header-container-bot{
     display: flex;
     justify-content: end;
     align-items: center;
+    height: 68px;
 }
 .header-bot-nav{
     display: flex;
@@ -102,55 +103,12 @@
     gap: 1rem;
     list-style: none;
 }
-.header-bot-nav-container__menu-link-list{
-    position: fixed;
-    left: 100%;
-    display: flex;
-    gap: 1.5rem;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    transition: var(--all-transitions);
-}
-.header-bot_menu-link{
-    position: relative;
-    color: #b0b5b6;
-    text-decoration: none;
-    font-size: 1rem;
-    display: flex;
-    transition: var(--all-transitions);
-}
-.header-bot_menu-link--active{
-    font-size: 30px;
-    top: -10px;
-}
-.header-bot_menu-link:hover{
-    color: #858585;
-    text-shadow: 0 0 0.25rem yellow;
-}
-.header-bot-nav-container__menu-item{
-    display: flex;
-}
-.header-bot-nav-container_date{
-    position: relative;
-    top: -10px;
-    font-size: 0.9rem;
-    text-decoration: none;
-    background-color: #329fe7;
-    color: white;
-    padding: 1rem;
-    border-radius: 30px;
-    transition: var(--all-transitions);
-}
-.header-bot-nav-container_date:hover{
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
-}
 .header-bot-nav__menu-icon-label{
+    position: relative;
+    top: 0.5rem;
+    right: 1rem;
     font-size: 1.5rem;
     cursor: pointer;
-    position: relative;
-    padding: 0 0.75rem 0 0;
-    bottom: 10px;
     transition: var(--all-transitions);
     color: #9b54dd;
 }
@@ -163,6 +121,61 @@
 .header-bot-nav__menu-icon-checkbox{
     display: none;
 }
+.header-bot-nav__menu-icon-checkbox:checked+.header-bot-nav-container__menu-link-list{
+    left: 50%;
+}
+.header-bot-nav-container__menu-link-list{
+    position: fixed;
+    z-index: 100;
+    top: 68px;
+    left: 100%;
+    width: 50%;
+    height: calc(100% - 4rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+    background-color: #00b4f5b4;
+    margin: 0;
+    padding: 0;
+    transition: var(--all-transitions);
+}
+.header-bot_menu-link{
+    position: relative;
+    color: #b0b5b6;
+    text-decoration: none;
+    font-size: 1rem;
+    display: flex;
+    transition: var(--all-transitions);
+}
+
+.header-bot_menu-link--active{
+    font-size: 30px;
+}
+.header-bot_menu-link:hover{
+    color: #858585;
+    text-shadow: 0 0 0.25rem #fff000;
+    
+}
+.header-bot-nav-container__menu-item{
+    display: flex;
+}
+.header-bot-nav-container_date{
+    position: relative;
+    font-size: 0.9rem;
+    text-decoration: none;
+    background-color: #329fe7;
+    color: white;
+    padding: 1rem;
+    border-radius: 30px;
+    transition: var(--all-transitions);
+}
+.header-bot-nav-container_date:hover{
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+}
+
 
 @media(min-width: 854px){
     .root{
@@ -171,10 +184,17 @@
     .header-top__menu-link-list{
         position: static;
     }
+    .header-bot-nav__menu-icon-label{
+        display: none;
+    }
     .header-bot-nav-container__menu-link-list{
         position: static;
+        width: auto;
+        flex-direction: row;
+        gap: 1.5rem;
+        background-color: transparent;
+        list-style: none;
     }
-    
 }
 @media(max-width:854px){
     .header-logo-img{
@@ -184,4 +204,23 @@
         transform: scale(0.5);
         animation: none;
     }
+    .header-top__menu-link-list{
+        display: none;
+    }
+    .header-bot_menu-link{
+        color: white;
+    }
+    .header-bot_menu-link:hover{
+        transform: scale(1.05);
+        color: white;
+        text-shadow: 0 0 0.25rem #fff,
+        0 0 0.5rem #fff, 0 0 0.75rem #fff
+    }
+    .header-bot-nav-container_date:hover{
+        color: #329fe7;
+        background-color: white;
+    }
 }
+
+
+
