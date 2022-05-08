@@ -60,30 +60,14 @@
             <div class="filter-container">
                 <h3 class="filters__title">Busca a tu médico:</h3>
                 <div class="d-flex my-4 col-12 gap-2">
-                    <select class="form-select rounded-pill" aria-label="Default select example">
-                        <option selected>Sede</option>
-                        <option value="1">Lima</option>
-                        <option value="2">Mediocentro San Isidro</option>
-                        <option value="3">San borja</option>
-                        <option value="4">Surco</option>
-                        <option value="5">Toda la red de Clínica</option>
+                    <select class="form-select rounded-pill" aria-label="Default select example" id="cmbSedes">
+                        <option value="" selected>Todas las sedes</option>
                     </select>
-                    <select class="form-select rounded-pill" aria-label="Default select example">
-                        <option selected>Especialidad</option>
-                        <option value="1">Administración</option>
-                        <option value="2">Alergología</option>
-                        <option value="3">Cardiología</option>
-                        <option value="4">Cardiología Pediatrica</option>
-                        <option value="5">Centro De endoscopia</option>
-                        <option value="6">Cirugía Bariátrica</option>
-                        <option value="7">Cirugía Cardiovascular-Tórax</option>
-                        <option value="8">Cirugía De Cabeza y Cuello</option>
-                        <option value="9">Cirugía De Cabeza, Cuello y Maxilofacial</option>
-                        <option value="10">Cirugía de Mamas y Tumores</option>
-                        <option value="11">Cirugía de Mano</option>
+                    <select class="form-select rounded-pill" aria-label="Default select example" id="cmbEspecialidades">
+                        <option value="" selected>Todas las especialidades</option>
                     </select>
-                    <input type="text" class="form-control rounded-pill" placeholder="Nombre" aria-label="Username">
-                    <button type="button" class="btn btn-primary rounded-pill col-2">Buscar</button>
+                    <input type="text" class="form-control rounded-pill" placeholder="Nombre" id="txtNombreMedico" aria-label="Username">
+                    <button type="button" class="btn btn-primary rounded-pill col-2" id="btnBuscar">Buscar</button>
                 </div>     
             </div>  
         </section>
@@ -125,140 +109,10 @@
         </section>
         <section class="doctors">
             <div class="doctors-container">
-                <div class="row g-2 mx-auto container" >
-                    <div class="col-md-3">
-                        <article class="card">
-                        <img src="https://sabrmeamundociprod.blob.core.windows.net/bscbrmeamundociprod/Foto/1005569.jpg"
-                            class="card-img-top" alt="Imagen doctor">
-                        <div class="card-body">
-                            <h5 class="card-title">Jacqueline Abad Nuñez</h5>
-                            <p class="card-text">CMP: 71927</p>
-                            <a href="#" class="btn btn-primary rounded-pill">Ver horarios</a>
-                        </div>
-                        </article>
-                    </div>
-                    <div class="col-md-3">
-                        <article class="card">
-                        <img src="https://sabrmeamundociprod.blob.core.windows.net/bscbrmeamundociprod/Foto/8712.jpg"
-                            class="card-img-top" alt="Imagen doctor">
-                        <div class="card-body">
-                            <h5 class="card-title">Segundo Carlos Abanto Argomedo</h5>
-                            <p class="card-text">CMP: 031326</p>
-                            <a href="#" class="btn btn-primary rounded-pill">Ver horarios</a>
-                        </div>
-                        </article>
-                    </div>
-                    <div class="col-md-3">
-                        <article class="card">
-                        <img src="https://sabrmeamundociprod.blob.core.windows.net/bscbrmeamundociprod/Foto/5001.jpg"
-                            class="card-img-top" alt="Imagen doctor">
-                        <div class="card-body">
-                            <h5 class="card-title">Marcela Abarca Benavente</h5>
-                            <p class="card-text">CMP: 036208</p>
-                            <a href="#" class="btn btn-primary rounded-pill">Ver horarios</a>
-                        </div>
-                        </article>
-                    </div>
-                    <div class="col-md-3">
-                        <article class="card">
-                        <img src="https://sabrmeamundociprod.blob.core.windows.net/bscbrmeamundociprod/Foto/1005108.jpg"
-                            class="card-img-top" alt="Imagen doctor">
-                        <div class="card-body">
-                            <h5 class="card-title">Arturo Aguilar Maldonado</h5>
-                            <p class="card-text">CMP: 53507</p>
-                            <a href="#" class="btn btn-primary rounded-pill">Ver horarios</a>
-                        </div>
-                        </article>
-                    </div>
-                    <div class="col-md-3">
-                        <article class="card">
-                        <img src="https://sabrmeamundociprod.blob.core.windows.net/bscbrmeamundociprod/Foto/8083.jpg"
-                            class="card-img-top" alt="Imagen doctor">
-                        <div class="card-body">
-                            <h5 class="card-title">Sergio Ricardo Aguilar Romero</h5>
-                            <p class="card-text">CMP: 030230</p>
-                            <a href="#" class="btn btn-primary rounded-pill">Ver horarios</a>
-                        </div>
-                        </article>
-                    </div>
-                    <div class="col-md-3">
-                        <article class="card">
-                        <img src="https://sabrmeamundociprod.blob.core.windows.net/bscbrmeamundociprod/Foto/1005101.jpg"
-                            class="card-img-top" alt="Imagen doctor">
-                        <div class="card-body">
-                            <h5 class="card-title">Carlos Roberto Aguirre Masson</h5>
-                            <p class="card-text">CMP: 49392</p>
-                            <a href="#" class="btn btn-primary rounded-pill">Ver horarios</a>
-                        </div>
-                        </article>
-                    </div>
-                    <div class="col-md-3">
-                        <article class="card">
-                        <img src="https://sabrmeamundociprod.blob.core.windows.net/bscbrmeamundociprod/Foto/5028.jpg"
-                            class="card-img-top" alt="Imagen doctor">
-                        <div class="card-body">
-                            <h5 class="card-title">Cesar Anibal Alarcon Olivera</h5>
-                            <p class="card-text">CMP: 20029</p>
-                            <a href="#" class="btn btn-primary rounded-pill">Ver horarios</a>
-                        </div>
-                        </article>
-                    </div>
-                    <div class="col-md-3">
-                        <article class="card">
-                        <img src="https://www.clinicainternacional.com.pe/staff-medico-img/Foto/8387.jpg"
-                            class="card-img-top" alt="Imagen doctor">
-                        <div class="card-body">
-                            <h5 class="card-title">Jose Samuel Alarcon Vera</h5>
-                            <p class="card-text">CMP: 023670</p>
-                            <a href="#" class="btn btn-primary rounded-pill">Ver horarios</a>
-                        </div>
-                        </article>
-                    </div>
-                    <div class="col-md-3">
-                        <article class="card">
-                        <img src="https://sabrmeamundociprod.blob.core.windows.net/bscbrmeamundociprod/Foto/1004966.jpg"
-                            class="card-img-top" alt="Imagen doctor">
-                        <div class="card-body">
-                            <h5 class="card-title">Ricardo Aliendres Galindo</h5>
-                            <p class="card-text">CMP: 082851</p>
-                            <a href="#" class="btn btn-primary rounded-pill">Ver horarios</a>
-                        </div>
-                        </article>
-                    </div>
-                    <div class="col-md-3">
-                        <article class="card">
-                        <img src="https://sabrmeamundociprod.blob.core.windows.net/bscbrmeamundociprod/Foto/1005459.jpg"
-                            class="card-img-top" alt="Imagen doctor">
-                        <div class="card-body">
-                            <h5 class="card-title">Olenka Alcas Arce</h5>
-                            <p class="card-text">CMP: 62023</p>
-                            <a href="#" class="btn btn-primary rounded-pill">Ver horarios</a>
-                        </div>
-                        </article>
-                    </div>
-                    <div class="col-md-3">
-                        <article class="card">
-                        <img src="https://sabrmeamundociprod.blob.core.windows.net/bscbrmeamundociprod/Foto/1005457.jpg"
-                            class="card-img-top" alt="Imagen doctor">
-                        <div class="card-body">
-                            <h5 class="card-title">Patricia Aldana Torres</h5>
-                            <p class="card-text">CMP: 64243</p>
-                            <a href="#" class="btn btn-primary rounded-pill">Ver horarios</a>
-                        </div>
-                        </article>
-                    </div>
-                    <div class="col-md-3">
-                        <article class="card">
-                        <img src="	https://sabrmeamundociprod.blob.core.windows.net/bscbrmeamundociprod/Foto/1004452.jpg"
-                            class="card-img-top" alt="Imagen doctor">
-                        <div class="card-body">
-                            <h5 class="card-title">Franklin Aldecoa Bedoya</h5>
-                            <p class="card-text">CMP: 20944</p>
-                            <a href="#" class="btn btn-primary rounded-pill">Ver horarios</a>
-                        </div>
-                        </article>
-                    </div>
+
+                <div class="row g-2 mx-auto container"  id="doctoresContenedor">
                 </div>
+
             </div>
         </section>
         <section class="pagination">
@@ -291,5 +145,7 @@
 
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+<script src="./js/index.js" type="module"></script>
 </body>
 </html>
