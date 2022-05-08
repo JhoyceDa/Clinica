@@ -22,32 +22,32 @@ const cerrarModalRegistro=()=>{
 const getFormDataUsuario = (nombreFormulario) => {
     const documentFormProducto = document.forms[nombreFormulario];
     const tipoDocumento = documentFormProducto['tipoDocumento'].value;
-    const nombreDocumento = documentFormProducto['nombreDocumento'].value;
+    const numeroDocumento = documentFormProducto['numeroDocumento'].value;
     const contraseña = documentFormProducto['contraseña'].value;
   
-    return ({ tipoDocumento, nombreDocumento, contraseña });
+    return ({ tipoDocumento, numeroDocumento, contraseña });
 
   };
 
 const validateForm = (nombreFormulario) => {
     const documentFormProducto = document.forms[nombreFormulario];
     const tipoDocumento = documentFormProducto['tipoDocumento'].value;
-    const nombreDocumento = documentFormProducto['nombreDocumento'].value;
+    const numeroDocumento = documentFormProducto['numeroDocumento'].value;
     const contraseña = documentFormProducto['contraseña'].value;
   
-    return [tipoDocumento.trim(), nombreDocumento.trim(), contraseña.trim()].includes('');
+    return [tipoDocumento.trim(), numeroDocumento.trim(), contraseña.trim()].includes('');
   };
 
   const resetForm = (nombreFormulario) => {
     const documentFormProducto = document.forms[nombreFormulario];
     documentFormProducto['tipoDocumento'].value = 'DNI';
-    documentFormProducto['nombreDocumento'].value = '';
+    documentFormProducto['numeroDocumento'].value = '';
     documentFormProducto['contraseña'].value = '';
   };
 
 const registrarUsuario=()=>{
 
-      const { tipoDocumento, nombreDocumento, contraseña } = getFormDataUsuario('frmRegistro');
+      const { tipoDocumento, numeroDocumento, contraseña } = getFormDataUsuario('frmRegistro');
       
 
       if (validateForm('frmRegistro')) {
@@ -60,7 +60,7 @@ const registrarUsuario=()=>{
 
       } else {
         
-        arrayUsuarios = [...arrayUsuarios, new Usuario(tipoDocumento, nombreDocumento, contraseña)];
+        arrayUsuarios = [...arrayUsuarios, new Usuario(tipoDocumento, numeroDocumento, contraseña)];
         resetForm('frmRegistro');
         cerrarModalRegistro();
           Swal.fire(
@@ -69,17 +69,44 @@ const registrarUsuario=()=>{
             'success'
           ).then((result) => {
             if (result.isConfirmed) {
-              window.location.href = '/reservarCita.html';
+              window.location.href = './reservarCita.html';
             } 
           });
-          console.log(arrayUsuarios);
       }
 
 }
 
 const loginUsuario=()=>{
 
+  const { tipoDocumento, numeroDocumento, contraseña } = getFormDataUsuario('frmLogin');
 
+  if (!validateForm('frmLogin')) {
+
+    const usuarioBuscado = arrayUsuarios.filter((usuario) => {
+
+      if(usuario.numeroDocumento==numeroDocumento && 
+        usuario.contraseña == contraseña && 
+        usuario.tipoDocumento==tipoDocumento){
+  
+        return usuario;
+  
+      }
+  
+    });
+
+    
+    if(usuarioBuscado.length!=0)
+    {
+      window.location.href = './reservarCita.html';
+    }else{
+      Swal.fire({
+        icon: 'error',
+        title: 'Credenciales incorrectas',
+        text: 'Verifica nuevamente',
+      });
+    }
+
+  }
 
 }
 
@@ -88,12 +115,19 @@ const documentReady = () => {
     
     const btnBuscar = document.getElementById("btnRegistro");
     const frmRegistro = document.querySelector('#frmRegistro');
+    const frmLogin = document.querySelector('#frmLogin');
 
     const submitRegistro=(e)=>{
       e.preventDefault();
       registrarUsuario();
     }
 
+    const submitLogin=(e)=>{
+      e.preventDefault();
+      loginUsuario();
+    }
+
+    frmLogin.addEventListener('submit', submitLogin);
     frmRegistro.addEventListener('submit', submitRegistro);
     btnBuscar.addEventListener('click',abrirModalRegistro);
 
