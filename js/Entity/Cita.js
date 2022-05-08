@@ -57,11 +57,11 @@ export class Cita{
   }
 
   get hora(){
-    return this._dia;
+    return this._hora;
   }
 
-  set dia(dia){
-    this._dia=dia;
+  set hora(hora){
+    this._hora=hora;
   }
 
   get estado(){
